@@ -13,6 +13,9 @@ public int PersonelId { get; set; }     	    // FK2 -> PersonelId
 
 public DateTime GelisTar { get; set; }
 
+public int GelisMikId { get; set; } 
 
 	
 }
+
+
