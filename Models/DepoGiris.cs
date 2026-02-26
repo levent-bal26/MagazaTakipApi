@@ -10,8 +10,8 @@ public int FirmaId { get; set; }     		    // FK3 -> FirmaId
 public int İsyeriId { get; set; }     		    // FK2 -> İsyeriId
 public int PersonelId { get; set; }     	    // FK2 -> PersonelId
 public DateTime GelisTar { get; set; }
-public int GelisMikId { get; set; }
-
+[Required]
+public string GelisMiktar { get; set; } = string.Empty;
 [Required]
 public string GelisBirimi { get; set; } = string.Empty;
 public decimal AlisFiyati { get; set; }

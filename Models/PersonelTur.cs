@@ -9,5 +9,7 @@ public int PersonelTurId { get; set; }                     // PK
 [Required]
 public string PersonelTuru { get; set; } = string.Empty;  
 
+public int SatisHareketId { get; set; }     	// FK1 -> SatisHareketId
+
 	
 }
