@@ -11,3 +11,5 @@ public string BedenAdi { get; set; } = string.Empty;
 
 	
 }
+
+
