@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MagazaTakipApi.Models;
 public class Musteri
 {
-public int IsyeriId { get; set; }     		    // PK
+public int MusteriId { get; set; }     		    // PK
 
 [Required]
 public string MusteriAdi { get; set; } = string.Empty;  

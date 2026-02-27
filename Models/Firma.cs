@@ -6,7 +6,7 @@ public class Firma
 public int FirmaId { get; set; }                     // PK
 
 [Required]
-public string FirmaAdı { get; set; } = string.Empty;
+public string FirmaAdi { get; set; } = string.Empty;
 
 [Required]
 public string FirmaTel { get; set; } = string.Empty; 
