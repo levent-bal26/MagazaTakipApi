@@ -1,10 +1,8 @@
 using System.ComponentModel.DataAnnotations;
-
-namespace MagazaTakipApi.Models;
-
-public class Firma
+namespace MagazaTakipApi.Dtos.Firma;
+public class FirmaListDto
 {
-    public int FirmaId { get; set; } // PK
+     public int FirmaId { get; set; } // PK
 
     [Required]
     public string FirmaAdi { get; set; } = string.Empty;
@@ -14,4 +12,5 @@ public class Firma
 
     [Required]
     public string FirmaAdres { get; set; } = string.Empty;
+
 }

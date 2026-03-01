@@ -23,7 +23,8 @@ public class AppDbContext : DbContext
 
     public DbSet<Satis> Satislar => Set<Satis>();
 
-    public DbSet<Urun> Urunler => Set<Urun>();    
+    public DbSet<Urun> Urunler => Set<Urun>();   
+
 
       
 }
