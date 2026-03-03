@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagazaTakipApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260228144756_InitialCreate")]
+    [Migration("20260303065701_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -58,6 +58,9 @@ namespace MagazaTakipApi.Migrations
                     b.Property<DateTime>("GelisTar")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("IsyeriId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("PersonelId")
                         .HasColumnType("INTEGER");
 
@@ -65,9 +68,6 @@ namespace MagazaTakipApi.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UrunId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("İsyeriId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("DepoGirisId");
@@ -135,10 +135,6 @@ namespace MagazaTakipApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("MusteriSoyad")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("MusteriTel")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -176,9 +172,6 @@ namespace MagazaTakipApi.Migrations
                     b.Property<int>("PersonelTurId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("SatisHareketId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("PersonelId");
 
                     b.ToTable("Personeller");
@@ -194,9 +187,6 @@ namespace MagazaTakipApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("SatisHareketId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("PersonelTurId");
 
                     b.ToTable("PersonelTurler");
@@ -204,7 +194,7 @@ namespace MagazaTakipApi.Migrations
 
             modelBuilder.Entity("MagazaTakipApi.Models.Satis", b =>
                 {
-                    b.Property<int>("SatisId")
+                    b.Property<int>("SatisHareketId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -221,9 +211,6 @@ namespace MagazaTakipApi.Migrations
                     b.Property<decimal>("SatisFiyati")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("SatisHareketId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("SatisMiktar")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -234,7 +221,7 @@ namespace MagazaTakipApi.Migrations
                     b.Property<int>("UrunId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("SatisId");
+                    b.HasKey("SatisHareketId");
 
                     b.ToTable("Satislar");
                 });
